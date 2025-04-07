@@ -1,7 +1,7 @@
 ﻿@page "{handler?}"
 @model IndexModel
 @{
-    ViewData["Title"] = "Basket";
+    ViewData["Title"] = "Корзина";
 }
 <section class="esh-catalog-hero">
     <div class="container">
@@ -16,11 +16,11 @@
         <form method="post">
             <article class="esh-basket-titles row">
                 <br />
-                <section class="esh-basket-title col-xs-3">Product</section>
+                <section class="esh-basket-title col-xs-3">Продукт</section>
                 <section class="esh-basket-title col-xs-3 hidden-lg-down"></section>
-                <section class="esh-basket-title col-xs-2">Price</section>
-                <section class="esh-basket-title col-xs-2">Quantity</section>
-                <section class="esh-basket-title col-xs-2">Cost</section>
+                <section class="esh-basket-title col-xs-2">Цена</section>
+                <section class="esh-basket-title col-xs-2">Количество</section>
+                <section class="esh-basket-title col-xs-2">Расходы</section>
             </article>
             <div class="esh-catalog-items row">
                 <div asp-validation-summary="All" class="text-danger"></div>
@@ -36,7 +36,7 @@
                             <section class="esh-basket-item esh-basket-item--middle col-xs-2">$ @item.UnitPrice.ToString("N2")</section>
                             <section class="esh-basket-item esh-basket-item--middle col-xs-2">
                                 <input type="hidden" name="@("Items[" + i + "].Id")" value="@item.Id" />
-                                <input type="number" class="esh-basket-input" min="0" name="@("Items[" + i + "].Quantity")" value="@item.Quantity" />
+                                <input type="number" class="esh-basket-input" min="0" name="@("Items[" + i + "].Количество")" value="@item.Quantity" />
                             </section>
                             <section class="esh-basket-item esh-basket-item--middle esh-basket-item--mark col-xs-2">$ @Math.Round(item.Quantity * item.UnitPrice, 2).ToString("N2")</section>
                         </div>
@@ -49,7 +49,7 @@
                 <div class="container">
                     <article class="esh-basket-titles esh-basket-titles--clean row">
                         <section class="esh-basket-title col-xs-10"></section>
-                        <section class="esh-basket-title col-xs-2">Total</section>
+                        <section class="esh-basket-title col-xs-2">Общий</section>
                     </article>
 
                     <article class="esh-basket-items row">
@@ -63,15 +63,15 @@
                 </div>
                 <div class="row">
                     <section class="esh-basket-item col-xs-1">
-                        <a asp-page="/Index" class="btn esh-basket-checkout text-white">[ Continue Shopping ]</a>
+                        <a asp-page="/Index" class="btn esh-basket-checkout text-white">Продолжить покупки</a>
                     </section>
                     <section class="esh-basket-item col-xs-push-7 col-xs-4">
 
                         <button class="btn esh-basket-checkout" name="updatebutton" value="" type="submit"
                                 asp-page-handler="Update">
-                            [ Update ]
+                            Обновлять
                         </button>
-                        <a asp-page="./Checkout" class="btn esh-basket-checkout">[ Checkout ]</a>
+                        <a asp-page="./Checkout" class="btn esh-basket-checkout">Проверить</a>
                     </section>
                 </div>
             </div>
@@ -80,11 +80,11 @@
     else
     {
         <h3 class="esh-catalog-items row">
-            Basket is empty.
+            Корзина пуста.
         </h3>
 
         <section class="esh-basket-item">
-            <a asp-page="/Index" class="btn esh-basket-checkout text-white">[ Continue Shopping ]</a>
+            <a asp-page="/Index" class="btn esh-basket-checkout text-white">Продолжить покупки</a>
         </section>
     }
 </div>

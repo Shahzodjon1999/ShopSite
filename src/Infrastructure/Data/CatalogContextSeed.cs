@@ -61,11 +61,11 @@ public class CatalogContextSeed
     {
         return new List<CatalogBrand>
             {
-                new("Azure"),
-                new(".NET"),
-                new("Visual Studio"),
-                new("SQL Server"),
-                new("Other")
+                new("Nike"),
+                new("Adidas"),
+                new("Zara"),
+                new("Puma"),
+                new("Gucci")
             };
     }
 
@@ -73,10 +73,10 @@ public class CatalogContextSeed
     {
         return new List<CatalogType>
             {
-                new("Mug"),
-                new("T-Shirt"),
-                new("Sheet"),
-                new("USB Memory Stick")
+                new("Футболки"),
+                new("Рубашки"),
+                new("Джинсы"),
+                new("Куртки")
             };
     }
 

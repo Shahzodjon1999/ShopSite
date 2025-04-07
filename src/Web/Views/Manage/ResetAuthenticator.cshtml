@@ -7,15 +7,15 @@
 <div class="alert alert-warning" role="alert">
     <p>
         <span class="glyphicon glyphicon-warning-sign"></span>
-        <strong>If you reset your authenticator key your authenticator app will not work until you reconfigure it.</strong>
+        <strong>Если вы сбросите ключ аутентификации, ваше приложение аутентификации не будет работать, пока вы не перенастроите его.</strong>
     </p>
     <p>
-        This process disables 2FA until you verify your authenticator app and will also reset your 2FA recovery codes.
-        If you do not complete your authenticator app configuration you may lose access to your account.
+        Этот процесс отключает 2FA до тех пор, пока вы не проверите свое приложение-аутентификатор, а также сбросит ваши коды восстановления 2FA.
+        Если вы не завершите настройку приложения-аутентификатора, вы можете потерять доступ к своей учетной записи.
     </p>
 </div>
 <div>
     <form asp-action="ResetAuthenticator" method="post" class="form-group">
-        <button class="btn btn-danger" type="submit">Reset authenticator key</button>
+        <button class="btn btn-danger" type="submit">Сброс ключа аутентификатора</button>
     </form>
 </div>
